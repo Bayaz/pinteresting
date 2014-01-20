@@ -1,15 +1,15 @@
 <div class="jumbotron center">
-
-	<h1>Medical Technology Solutions</h1>
-
-	<% if user_signed_in? %>
-	# do something
-	<% else %>
-		<p>
-			<%= link_to "Log in", new_user_session_path, class: "btn btn-primary btn-lg" %>
-			<%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>
-		</p>
-	<% end %>	
-
-
+     <h1>Medical Technology Solutions</h1>
+     <% if user_signed_in? %>
+          # do something
+          <p></p>
+          <%= link_to "Articles", pins_path, class: "btn btn-default btn-lg" %>
+         <%= link_to "Equipment", devices_path, class: "btn btn-primary btn-lg" %>
+         <%= link_to "Pins", pins_path, class: "btn btn-default btn-lg" %>
+     <% else %>
+       <p>
+         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       </p>
+  <% end %>  
 </div>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ciid: MyString
+  nomenclature: MyString
+  description: MyText
+  medical: false
+
+two:
+  ciid: MyString
+  nomenclature: MyString
+  description: MyText
+  medical: false

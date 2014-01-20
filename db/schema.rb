@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115003730) do
+ActiveRecord::Schema.define(version: 20140120131630) do
 
-  create_table "equipment", force: true do |t|
-    t.string   "Description"
-    t.string   "EquipmentID"
-    t.string   "Make"
-    t.string   "Model"
-    t.boolean  "Medical"
+  create_table "devices", force: true do |t|
+    t.string   "ciid"
+    t.string   "nomenclature"
+    t.text     "description"
+    t.boolean  "medical"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -27,7 +26,10 @@ ActiveRecord::Schema.define(version: 20140115003730) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "pins", ["user_id"], name: "index_pins_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

@@ -1,5 +1,5 @@
 Pinteresting::Application.routes.draw do
-  resources :equipment
+  resources :devices
 
   resources :pins
 
